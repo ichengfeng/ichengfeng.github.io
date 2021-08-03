@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <title>css网页布局</title>
     <link rel="stylesheet" href="css/index.css">
+    <script>
+        function nextView() {
+            window.location.href="contents/Predicate.html";
+        }
+    </script>
 </head>
 <body>
 <!--整体到部分，左到右，上到下-->
@@ -31,7 +36,7 @@
         <!--最上层的内容-->
         <div class="topplayer-top">
             <div class="word">MY BEAUTIFUL LIFE</div>
-            <button>LOOK MORE &gt;</button>
+            <button onclick="nextView()">LOOK MORE &gt;</button>
         </div>
         <div class="middle">
             <div class="m-top">
@@ -92,7 +97,7 @@
     <div class="clear"></div>
     <!--底部-->
     <div class="footer">
-        &copy 2016 imooc.com  京ICP备13046642号
+        &copy 2020 imooc.com  京ICP备13046642号
     </div>
 </body>
 </html>
