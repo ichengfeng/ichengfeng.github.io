@@ -1,0 +1,12 @@
+{
+    "entry" : {
+        "banners" : [
+            "https://ichengfeng.github.io/api/xinxi/banner/01.jpg",
+            "https://ichengfeng.github.io/api/xinxi/banner/02.jpg",
+            "https://ichengfeng.github.io/api/xinxi/banner/03.jpg",
+            "https://ichengfeng.github.io/api/xinxi/banner/04.jpg",
+            "https://ichengfeng.github.io/api/xinxi/banner/05.jpg",
+            "https://ichengfeng.github.io/api/xinxi/banner/06.jpg"
+        ]
+    }
+}

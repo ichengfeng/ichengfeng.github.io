@@ -1,13 +1,5 @@
 {
     "entry" : {
-        "banners" : [
-            "https://ichengfeng.github.io/api/xinxi/banner/01.jpg",
-            "https://ichengfeng.github.io/api/xinxi/banner/02.jpg",
-            "https://ichengfeng.github.io/api/xinxi/banner/03.jpg",
-            "https://ichengfeng.github.io/api/xinxi/banner/04.jpg",
-            "https://ichengfeng.github.io/api/xinxi/banner/05.jpg",
-            "https://ichengfeng.github.io/api/xinxi/banner/06.jpg"
-        ],
         "items" : [
             {
                 "activity_tag" : "https://ichengfeng.github.io/api/xinxi/activity/ic_fatie.png",
@@ -91,8 +83,8 @@
                 "part_in_peoples" : "3.8w万人参与",
                 "remaining_time" : "15分钟",
                 "activity_status" : 1,
-                "score" : 500,
-                "activity" : {
+                "score" : 200,
+                "award_activity" : {
                     "act_title" : "参加活动有机会获得大奖",
                     "lottery_time" : "2021.12.12 18:00 准时开奖",
                     "awards" : [
