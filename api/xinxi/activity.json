@@ -14,7 +14,8 @@
                 "part_in_peoples" : "3.8w万人参与",
                 "remaining_time" : "还剩23小时15分",
                 "activity_status" : 1,
-                "score" : 200
+                "score" : 200,
+                "unit" : "篇"
             },
             {
                 "activity_type" : 2,
@@ -29,7 +30,8 @@
                 "part_in_peoples" : "1234人参与",
                 "remaining_time" : "还剩18天23小时15分",
                 "activity_status" : 2,
-                "score" : 20
+                "score" : 20,
+                "unit" : "单"
             },
             {
                 "activity_type" : 3,
@@ -44,7 +46,8 @@
                 "part_in_peoples" : "1.8w万人参与",
                 "remaining_time" : "15分钟前结束",
                 "activity_status" : 3,
-                "score" : 50
+                "score" : 50,
+                "unit" : "人"
             },
             {
                 "activity_type" : 4,
@@ -59,7 +62,8 @@
                 "part_in_peoples" : "6.3w万人参与",
                 "remaining_time" : "还剩6天23小时15分",
                 "activity_status" : 4,
-                "score" : 500
+                "score" : 500,
+                "unit" : ""
             },
             {
                 "activity_type" : 5,
@@ -74,7 +78,8 @@
                 "part_in_peoples" : "3.8w万人参与",
                 "remaining_time" : "还剩23小时15分",
                 "activity_status" : 5,
-                "score" : 500
+                "score" : 50,
+                "unit" : "次"
             },
             {
                 "activity_type" : 6,
@@ -90,6 +95,7 @@
                 "remaining_time" : "15分钟",
                 "activity_status" : 1,
                 "score" : 200,
+                "unit" : "",
                 "award_activity" : {
                     "act_title" : "参加活动有机会获得大奖",
                     "lottery_time" : "2021.12.12 18:00 准时开奖",
