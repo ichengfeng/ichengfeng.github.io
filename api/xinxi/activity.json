@@ -14,6 +14,7 @@
                 "part_in_peoples" : "3.8w人参与",
                 "remaining_time" : "还剩23小时15分",
                 "activity_status" : 1,
+                "participated" : false,
                 "score" : 200,
                 "unit" : "篇"
             },
@@ -30,6 +31,7 @@
                 "part_in_peoples" : "1234人参与",
                 "remaining_time" : "还剩18天23小时15分",
                 "activity_status" : 2,
+                "participated" : false,
                 "score" : 20,
                 "unit" : "单"
             },
@@ -46,6 +48,7 @@
                 "part_in_peoples" : "1.8w人参与",
                 "remaining_time" : "15分钟前结束",
                 "activity_status" : 3,
+                "participated" : false,
                 "score" : 50,
                 "unit" : "人"
             },
@@ -62,6 +65,7 @@
                 "part_in_peoples" : "6.3w人参与",
                 "remaining_time" : "还剩6天23小时15分",
                 "activity_status" : 4,
+                "participated" : true,
                 "score" : 500,
                 "unit" : ""
             },
@@ -78,6 +82,7 @@
                 "part_in_peoples" : "3.8w人参与",
                 "remaining_time" : "还剩23小时15分",
                 "activity_status" : 5,
+                "participated" : true,
                 "score" : 50,
                 "unit" : "次"
             },
@@ -94,6 +99,7 @@
                 "part_in_peoples" : "3.8w人参与",
                 "remaining_time" : "15分钟",
                 "activity_status" : 1,
+                "participated" : false,
                 "score" : 200,
                 "unit" : "",
                 "award_activity" : {
