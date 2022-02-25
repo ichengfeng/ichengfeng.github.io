@@ -96,15 +96,18 @@
                     "awards" : [
                         {
                             "img" : "https://ichengfeng.github.io/resource/app/xinxi/goods/1.jpg",
-                            "count" : 1
+                            "count" : 1,
+                            "ranking" : 1
                         },
                         {
                             "img" : "https://ichengfeng.github.io/resource/app/xinxi/goods/2.jpg",
-                            "count" : 5
+                            "count" : 5,
+                            "ranking" : 2
                         },
                         {
                             "img" : "https://ichengfeng.github.io/resource/app/xinxi/goods/3.jpg",
-                            "count" : 30
+                            "count" : 30,
+                            "ranking" : 3
                         }
                     ]
                 }
