@@ -107,17 +107,17 @@
                     "lottery_time" : "2021.12.12 18:00 准时开奖",
                     "awards" : [
                         {
-                            "img" : "https://ichengfeng.github.io/resource/app/xinxi/goods/1.jpg",
+                            "img" : "https://picsum.photos/200/300?random=100",
                             "count" : 1,
                             "ranking" : 1
                         },
                         {
-                            "img" : "https://ichengfeng.github.io/resource/app/xinxi/goods/2.jpg",
+                            "img" : "https://picsum.photos/200/300?random=200",
                             "count" : 5,
                             "ranking" : 2
                         },
                         {
-                            "img" : "https://ichengfeng.github.io/resource/app/xinxi/goods/3.jpg",
+                            "img" : "https://picsum.photos/200/300?random=300",
                             "count" : 30,
                             "ranking" : 3
                         }
