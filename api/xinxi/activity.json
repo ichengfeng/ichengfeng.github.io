@@ -3,7 +3,7 @@
         "items" : [
             {
                 "activity_type" : 1,
-                "activity_tag" : "https://ichengfeng.github.io/resource/app/xinxi/activity/ic_fatie.png",
+                "activity_tag" : "ic_fatie",
                 "title" : "发帖聊聊：聊聊你与辛巴的故事吧！聊聊你与辛巴的故事吧！与辛巴的故事吧！",
                 "subTitle" : "转眼间又是一年的秋天，气温也在逐渐地下降，不少姐妹都开始准妹都开始准妹都开始不少姐妹都开始准妹都开始准妹都开始",
                 "heads" : [
@@ -20,7 +20,7 @@
             },
             {
                 "activity_type" : 2,
-                "activity_tag" : "https://ichengfeng.github.io/resource/app/xinxi/activity/ic_shaidan.png",
+                "activity_tag" : "ic_shaidan",
                 "title" : "晒单：2021年买过棉密码的进！",
                 "subTitle" : "转眼间又是一年的秋天，气温也在逐渐地下降，不少姐妹都开始准不少姐妹都开始准备",
                 "heads" : [
@@ -37,7 +37,7 @@
             },
             {
                 "activity_type" : 3,
-                "activity_tag" : "https://ichengfeng.github.io/resource/app/xinxi/activity/ic_yaoqingjinquan.png",
+                "activity_tag" : "ic_yaoqingjinquan",
                 "title" : "邀请进圈：邀请好友进入年货节福利圈子，年货节福利超前享受",
                 "subTitle" : "转眼间又是一年的秋天，气温也在逐渐地下降，不少姐妹都开始准",
                 "heads" : [
@@ -54,7 +54,7 @@
             },
             {
                 "activity_type" : 4,
-                "activity_tag" : "https://ichengfeng.github.io/resource/app/xinxi/activity/ic_jiaquanzi.png",
+                "activity_tag" : "ic_jiaquanzi",
                 "title" : "加圈子：欢迎加入三只松鼠品牌圈",
                 "subTitle" : "转眼间又是一年的秋天，气温也在逐渐地下降，不少姐妹都开始准，不少姐妹准，不少姐妹",
                 "heads" : [
@@ -71,7 +71,7 @@
             },
             {
                 "activity_type" : 5,
-                "activity_tag" : "https://ichengfeng.github.io/resource/app/xinxi/activity/ic_investigation.png",
+                "activity_tag" : "ic_investigation",
                 "title" : "调查问卷：聊聊你与辛巴",
                 "subTitle" : "转眼间又是一年的秋天，气温也在逐渐地下降，不少姐妹都开始准，不少姐妹准，不少姐妹",
                 "heads" : [
@@ -88,7 +88,7 @@
             },
             {
                 "activity_type" : 6,
-                "activity_tag" : "https://ichengfeng.github.io/resource/app/xinxi/activity/ic_yaoqingzhuce.png",
+                "activity_tag" : "ic_yaoqingzhuce",
                 "title" : "邀请注册：聊聊你与辛巴的故事吧！",
                 "subTitle" : "转眼间又是一年的秋天，气温也在逐渐地下降，不少姐妹都开始准，不少姐妹准，不少姐妹",
                 "heads" : [
