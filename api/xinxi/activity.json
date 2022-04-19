@@ -107,12 +107,12 @@
                     "lottery_time" : "2021.12.12 18:00 准时开奖",
                     "awards" : [
                         {
-                            "https://img0.baidu.com/it/u=3421586131,2277817122&fm=26&fmt=auto",
+                            "img" : "https://img0.baidu.com/it/u=3421586131,2277817122&fm=26&fmt=auto",
                             "count" : 1,
                             "ranking" : 1
                         },
                         {
-                            "https://img0.baidu.com/it/u=1016860127,2747783794&fm=26&fmt=auto",
+                            "img" : "https://img0.baidu.com/it/u=1016860127,2747783794&fm=26&fmt=auto",
                             "count" : 5,
                             "ranking" : 2
                         },
