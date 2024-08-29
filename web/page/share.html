@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H5 分享示例</title>
+</head>
+<body>
+
+<h1>点击按钮分享内容</h1>
+
+<button id="shareButton">分享</button>
+
+<script>
+    document.getElementById('shareButton').addEventListener('click', async () => {
+    if (navigator.share) {
+        try {
+            await navigator.share({
+                title: '分享的标题',
+                text: '分享的内容',
+                url: 'https://example.com',
+            });
+            console.log('分享成功');
+        } catch (err) {
+            console.error('分享失败: ', err);
+        }
+    } else {
+        alert('当前浏览器不支持分享功能');
+    }
+});
+
+</script>
+
+</body>
+</html>
