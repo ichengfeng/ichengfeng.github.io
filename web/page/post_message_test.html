@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>H5 Page</title>
+</head>
+<body>
+  <button onclick="sendDataToReactNative()">Send Data to React Native</button>
+
+  <script>
+    function sendDataToReactNative() {
+      const dataToSend = "Hello from H5!";
+      // 通过 postMessage 向 RN 发送数据
+      window.ReactNativeWebView.postMessage(dataToSend);
+    }
+  </script>
+</body>
+</html>
