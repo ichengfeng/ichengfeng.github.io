@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>唤起双 App 测试页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            margin-top: 50px;
+            color: #333;
+        }
+        button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .fallback-link {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #007bff;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>唤起双 App 测试页面</h1>
+    <button id="manualButton" style="display: none;" onclick="tryOpenAppB()">点击手动唤起 App B</button>
+    <div class="fallback-link" id="fallbackLink" style="display: none;">
+        未安装应用？<a href="https://yourdomain.com/fallback">访问网页版</a>
+    </div>
+
+    <script>
+        // 自定义 URL Scheme
+        const appAScheme = "palmpay://home?user=123"; // App A 的 Scheme
+        const appBScheme = "agent://home?user=123"; // App B 的 Scheme
+        const fallbackUrl = "https://baidu.com"; // 回退链接
+
+        let appOpened = false; // 标记是否成功唤起 App
+
+        function openAppWithIframe(url) {
+    const iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.src = url;
+    document.body.appendChild(iframe);
+    setTimeout(() => {
+        document.body.removeChild(iframe);
+    }, 1000); // 延迟移除 iframe
+}
+
+function tryOpenAppA() {
+    const start = Date.now();
+    openAppWithIframe(appAScheme);
+
+    setTimeout(() => {
+        if (Date.now() - start < 3000) {
+            // 如果未唤起 App A，则尝试唤起 App B
+            tryOpenAppB();
+        }
+    }, 3000); // 延迟 1 秒检查
+}
+
+function tryOpenAppB() {
+    const start = Date.now();
+    openAppWithIframe(appBScheme);
+
+    setTimeout(() => {
+        if (Date.now() - start < 3000) {
+            // 如果仍未唤起，则显示手动按钮和回退链接
+            document.getElementById("manualButton").style.display = "block";
+            document.getElementById("fallbackLink").style.display = "block";
+        }
+    }, 3000); // 延迟 1 秒检查
+}
+
+        // 手动唤起 App B
+        function openAppBManually() {
+            const start = Date.now();
+
+            // 尝试唤起 App B
+            window.location.href = appBScheme;
+
+            // 如果仍然未唤起，则跳转到网页版
+            setTimeout(() => {
+                if (Date.now() - start < 3000 && !appOpened) {
+                    window.location.href = fallbackUrl;
+                }
+            }, 3000); // 1秒后检查
+        }
+
+        // 页面加载时自动尝试唤起 App A
+        window.onload = () => {
+            tryOpenAppA();
+        };
+    </script>
+</body>
+</html>
