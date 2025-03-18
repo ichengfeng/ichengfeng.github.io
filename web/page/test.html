@@ -40,7 +40,7 @@
 </head>
 <body>
     <h1>唤起 App 测试页面</h1>
-    <button onclick="openApp()">点击唤起 App</button>
+    <button id="manualButton" style="display: none;" onclick="openApp()">点击唤起 App</button>
     <div class="fallback-link" id="fallbackLink" style="display: none;">
         未安装应用？<a href="https://yourdomain.com/fallback">访问网页版</a>
     </div>
@@ -48,12 +48,21 @@
     <script>
         // 自定义 URL Scheme
         const appUrl = "agent://applinks";
+
+        let appOpened = false;
+
+        // 手动唤起 App
         function openApp() {
             const start = Date.now();
 
             // 尝试唤起 App
             window.location.href = appUrl;
         }
+
+        // 页面加载时自动尝试唤起 App
+        window.onload = () => {
+            openApp();
+        };
     </script>
 </body>
 </html>
