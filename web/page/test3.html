@@ -67,7 +67,7 @@
             // 延迟移除 iframe
             setTimeout(() => {
                 document.body.removeChild(iframe);
-            }, 1000); // 延迟 1 秒移除 iframe
+            }, 3000); // 延迟 1 秒移除 iframe
         }
 
         /**
@@ -79,13 +79,13 @@
 
             // 检查是否成功唤起 App A
             setTimeout(() => {
-                if (Date.now() - start < 1000) {
+                if (Date.now() - start < 3000) {
                     // 如果未唤起 App A，则尝试唤起 App B
                     tryOpenAppB();
                 } else {
                     appOpened = true; // 标记为已唤起
                 }
-            }, 1000); // 延迟 1 秒检查
+            }, 3000); // 延迟 1 秒检查
         }
 
         /**
@@ -97,13 +97,13 @@
 
             // 检查是否成功唤起 App B
             setTimeout(() => {
-                if (Date.now() - start < 1000 && !appOpened) {
+                if (Date.now() - start < 3000 && !appOpened) {
                     // 如果仍未唤起，则显示手动按钮和回退链接
                     document.getElementById("manualButtonA").style.display = "block";
                     document.getElementById("manualButtonB").style.display = "block";
                     document.getElementById("fallbackLink").style.display = "block";
                 }
-            }, 1000); // 延迟 1 秒检查
+            }, 3000); // 延迟 1 秒检查
         }
 
         /**
