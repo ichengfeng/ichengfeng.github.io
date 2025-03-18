@@ -53,40 +53,40 @@
 
         let appOpened = false; // 标记是否成功唤起 App
 
-        // 尝试唤起 App A
-        function tryOpenAppA() {
-            const start = Date.now();
+        function openAppWithIframe(url) {
+    const iframe = document.createElement("iframe");
+    iframe.style.display = "none";
+    iframe.src = url;
+    document.body.appendChild(iframe);
+    setTimeout(() => {
+        document.body.removeChild(iframe);
+    }, 1000); // 延迟移除 iframe
+}
 
-            // 尝试唤起 App A
-            window.location.href = appAScheme;
+function tryOpenAppA() {
+    const start = Date.now();
+    openAppWithIframe(appAScheme);
 
-            // 检查是否成功唤起
-            setTimeout(() => {
-                if (Date.now() - start < 3000) {
-                    // 如果未唤起 App A，则尝试唤起 App B
-                    tryOpenAppB();
-                } else {
-                    appOpened = true; // 标记为已唤起
-                }
-            }, 3000); // 1秒后检查
+    setTimeout(() => {
+        if (Date.now() - start < 1000) {
+            // 如果未唤起 App A，则尝试唤起 App B
+            tryOpenAppB();
         }
+    }, 1000); // 延迟 1 秒检查
+}
 
-        // 尝试唤起 App B
-        function tryOpenAppB() {
-            const start = Date.now();
+function tryOpenAppB() {
+    const start = Date.now();
+    openAppWithIframe(appBScheme);
 
-            // 尝试唤起 App B
-            window.location.href = appBScheme;
-
-            // 检查是否成功唤起
-            setTimeout(() => {
-                if (Date.now() - start < 3000 && !appOpened) {
-                    // 如果仍未唤起，则显示手动按钮和回退链接
-                    document.getElementById("manualButton").style.display = "block";
-                    document.getElementById("fallbackLink").style.display = "block";
-                }
-            }, 3000); // 1秒后检查
+    setTimeout(() => {
+        if (Date.now() - start < 1000) {
+            // 如果仍未唤起，则显示手动按钮和回退链接
+            document.getElementById("manualButton").style.display = "block";
+            document.getElementById("fallbackLink").style.display = "block";
         }
+    }, 1000); // 延迟 1 秒检查
+}
 
         // 手动唤起 App B
         function openAppBManually() {
