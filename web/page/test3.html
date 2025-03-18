@@ -40,70 +40,63 @@
 </head>
 <body>
     <h1>唤起双 App 测试页面</h1>
-    <button id="manualButtonA" style="display: none;" onclick="openAppWithIframe(appAScheme)">手动唤起 App A</button>
-    <button id="manualButtonB" style="display: none;" onclick="openAppWithIframe(appBScheme)">手动唤起 App B</button>
+    <button id="manualButtonA" style="display: none;" onclick="openApp(appAScheme)">手动唤起 App A</button>
+    <button id="manualButtonB" style="display: none;" onclick="openApp(appBScheme)">手动唤起 App B</button>
     <div class="fallback-link" id="fallbackLink" style="display: none;">
         未安装应用？<a href="https://yourdomain.com/fallback">访问网页版</a>
     </div>
 
     <script>
         // 自定义 URL Scheme
-        const appAScheme = "palmpay://home?user=123"; // App A 的 Scheme
-        const appBScheme = "agent://home?user=123"; // App B 的 Scheme
-        const fallbackUrl = "https://www.baidu.com"; // 回退链接
-
-        let appOpened = false; // 标记是否成功唤起 App
+        const appAScheme = "appA://home?user=123"; // App A 的 Scheme
+        const appBScheme = "appB://home?user=123"; // App B 的 Scheme
+        const fallbackUrl = "https://yourdomain.com/fallback"; // 回退链接
 
         /**
-         * 使用 iframe 唤起 App
+         * 使用 window.location.href 唤起 App
          * @param {string} url - 要唤起的 URL Scheme
          */
-        function openAppWithIframe(url) {
-            const iframe = document.createElement("iframe");
-            iframe.style.display = "none";
-            iframe.src = url;
-            document.body.appendChild(iframe);
+        function openApp(url) {
+            window.location.href = url;
+        }
 
-            // 延迟移除 iframe
+        /**
+         * 唤起 App 并检查是否成功
+         * @param {string} url - 要唤起的 URL Scheme
+         * @param {function} callback - 如果唤起失败则执行的回调
+         */
+        function openAppWithTimeout(url, callback) {
+            const start = Date.now();
+            openApp(url);
+
             setTimeout(() => {
-                document.body.removeChild(iframe);
-            }, 3000); // 延迟 1 秒移除 iframe
+                if (Date.now() - start < 1000) {
+                    // 如果未唤起，则执行回调
+                    callback();
+                }
+            }, 1000); // 延迟 1 秒检查
         }
 
         /**
          * 尝试唤起 App A
          */
         function tryOpenAppA() {
-            const start = Date.now();
-            openAppWithIframe(appAScheme);
-
-            // 检查是否成功唤起 App A
-            setTimeout(() => {
-                if (Date.now() - start < 3000) {
-                    // 如果未唤起 App A，则尝试唤起 App B
-                    tryOpenAppB();
-                } else {
-                    appOpened = true; // 标记为已唤起
-                }
-            }, 3000); // 延迟 1 秒检查
+            openAppWithTimeout(appAScheme, () => {
+                // 如果未唤起 App A，则尝试唤起 App B
+                tryOpenAppB();
+            });
         }
 
         /**
          * 尝试唤起 App B
          */
         function tryOpenAppB() {
-            const start = Date.now();
-            openAppWithIframe(appBScheme);
-
-            // 检查是否成功唤起 App B
-            setTimeout(() => {
-                if (Date.now() - start < 3000 && !appOpened) {
-                    // 如果仍未唤起，则显示手动按钮和回退链接
-                    document.getElementById("manualButtonA").style.display = "block";
-                    document.getElementById("manualButtonB").style.display = "block";
-                    document.getElementById("fallbackLink").style.display = "block";
-                }
-            }, 3000); // 延迟 1 秒检查
+            openAppWithTimeout(appBScheme, () => {
+                // 如果仍未唤起，则显示手动按钮和回退链接
+                document.getElementById("manualButtonA").style.display = "block";
+                document.getElementById("manualButtonB").style.display = "block";
+                document.getElementById("fallbackLink").style.display = "block";
+            });
         }
 
         /**
