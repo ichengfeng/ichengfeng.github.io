@@ -48,7 +48,7 @@
 
     <script>
         // 自定义 URL Scheme
-        const appAScheme = "agent://home?user=123"; // App A 的 Scheme
+        const appAScheme = "https://business-daily.palmpay.com/applinks"; // App A 的 Scheme
         const appBScheme = "palmpay://home?user=123"; // App B 的 Scheme
         const fallbackUrl = "https://yourdomain.com/fallback"; // 回退链接
 
@@ -102,9 +102,9 @@
         /**
          * 页面加载时自动尝试唤起 App A
          */
-        window.onload = () => {
-            tryOpenAppA();
-        };
+        // window.onload = () => {
+        //     tryOpenAppA();
+        // };
     </script>
 </body>
 </html>
